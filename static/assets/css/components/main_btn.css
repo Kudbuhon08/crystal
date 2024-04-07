@@ -1,0 +1,17 @@
+.main_btn{
+    background: var(--main-blue);
+    color: var(--gold-txt-color);
+    font-family: 'Foglih';
+    height: 50px;
+    display: block;
+    margin: 0 auto;
+    max-width: 1280px;
+    width: 100%;
+    border-radius: 50px;
+    border: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-size: 19px;
+    font-weight: 500;
+}

@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+
+:root {
+  --main-blue: #15255e;
+  --text-white: #fff;
+  --gold-txt-color: #d8bcab;
+  --gray-border:#BDBDBD;
+}
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url(../fonts/inter/Inter-VariableFont_slnt\wght.ttf);
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Inter";
+  src: url(../fonts/inter/static/Inter-Bold.ttf);
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Inter";
+  src: url(../fonts/inter/static/Inter-Light.ttf);
+  font-weight: 200;
+}
+@font-face {
+  font-family: "Inter";
+  src: url(../fonts/inter/static/Inter-Medium.ttf);
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Inter";
+  src: url(../fonts/inter/static/Inter-Regular.ttf);
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Inter";
+  src: url(../fonts/inter/static/Inter-SemiBold.ttf);
+  font-weight: 600;
+}
+/* INTER FONT END */
+@font-face {
+  font-family: "Foglih";
+  src: url(../fonts/FoglihtenNo06/FoglihtenNo06_076.otf);
+}
+
+/* FoglihtenNo06_076 FONT END */
+@font-face {
+  font-family: "Saudagar";
+  src: url(../fonts/Saudagar/Saudagar.ttf);
+}
+
+.section {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1280px;
+}

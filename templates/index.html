@@ -1,0 +1,187 @@
+{% extends 'include/homepage.html' %}
+{% load static %}
+{% block content %}
+
+
+  <body style="background-color: #060d17">
+
+{% include 'include/header.html' %}
+
+
+    <section class="header_banner section">
+      <div class="header_banner_block" style="background-image: url({{setting.image.url}}) ;">
+        <h1 class="header_banner_title">{{setting.title}}</h1>
+      </div>
+      <button class="main_btn" onclick="window.location.href='{% url 'products' %}'">SHOP NOW</button>
+
+    </section>
+    <!-- HEADER END -->
+    <div class="line_seperation section"></div>
+    <section class="section film_screen">
+      <h1 class="section_title">Transparency Thin Film Screen</h1>
+      <p class="film_screen_txt">Our screens offer high transparency, maintaining visibility behind the screen, while delivering bright and clear images even in bright lighting conditions.Our screens offer high transparency, maintaining visibility behind the screen, while delivering bright and clear images even in bright lighting conditions.</p>
+      <div class="film_screen_cards">
+        <div class="film_screen_card">
+          <div class="film_screen_card_img">
+            <img src="{% static 'assets/images/film_screen1.jpg' %}" alt="" />
+          </div>
+          <p class="film_screen_card_desc">Our screens offer high transparency, maintaining visibility behind the screen, while delivering bright and clear images even in bright lighting conditions.</p>
+        </div>
+        <div class="film_screen_card">
+          <div class="film_screen_card_img">
+            <img src="{% static 'assets/images/film_screen2.jpg' %}" alt="" />
+          </div>
+          <p class="film_screen_card_desc">Our screens offer high transparency, maintaining visibility behind the screen, while delivering bright and clear images even in bright lighting conditions.</p>
+        </div>
+        <div class="film_screen_card">
+          <div class="film_screen_card_img">
+            <img src="{% static 'assets/images/film_screen3.jpg' %}" alt="" />
+          </div>
+          <p class="film_screen_card_desc">Our screens offer high transparency, maintaining visibility behind the screen, while delivering bright and clear images even in bright lighting conditions.</p>
+        </div>
+      </div>
+      <button class="main_btn" onclick="window.location.href='{% url 'products' %}'">SHOP NOW</button>
+
+
+    </section>
+    <!-- FILM SCREEN END -->
+    <div class="line_seperation"></div>
+
+    <section class="advantages section">
+      <h1 class="advantages_title">{{giv.title}}</h1>
+      <div class="advantages_video">
+        <img src="{% static 'assets/images/advant_mac.png' %}" alt="" />
+      </div>
+      <div class="advantages_blocks">
+        <div class="advantages_block">
+          <img src="{% static 'assets/icon/advant1.svg' %}" alt="" class="advantages_icon" />
+          <div class="advantages_block_texts">
+            <h3>FAST SHIPPING</h3>
+            <p>7-10 business days shipping</p>
+          </div>
+        </div>
+        <div class="advantages_block">
+          <img src="{% static 'assets/icon/advant2.svg' %}" alt="" class="advantages_icon" />
+          <div class="advantages_block_texts">
+            <h3>30-DAYS MONEY-BACK</h3>
+            <p>Full refund. No questions asked!</p>
+          </div>
+        </div>
+        <div class="advantages_block">
+          <img src="{% static 'assets/icon/advant3.svg' %}" alt="" class="advantages_icon" />
+          <div class="advantages_block_texts">
+            <h3>QUALITY ASSURANCE</h3>
+            <p>We deliver the best quality</p>
+          </div>
+        </div>
+        <div class="advantages_block">
+          <img src="{% static 'assets/icon/advant4.svg' %}" alt="" class="advantages_icon" />
+          <div class="advantages_block_texts">
+            <h3>CUSTOMER SUPPORT</h3>
+            <p>We will respond within 24 hours</p>
+          </div>
+        </div>
+      </div>
+      <button class="main_btn" onclick="window.location.href='{% url 'products' %}'">SHOP NOW</button>
+
+
+    </section>
+    <div class="line_seperation"></div>
+    <section class="section functions">
+      <div class="section_title">Functions</div>
+      <div class="functions_cont">
+        <div class="section_title" style="text-align: start; width: 100%; text-transform: none">Configuration parameters</div>
+        <div class="functions_cont_wrap">
+          <div class="functions_cont_block">
+            <img src="{{configurationsimage.image.url }}" alt="" />
+          </div>
+          <div class="functions_accordion">
+            {% for configurations in configurations%}
+            <div class="functions_accordion_item">
+              <h4>{{configurations.title}}</h4>
+              <p>{{configurations.descriptions}}</p>
+              <img src="{% static 'assets/icon/arrow.svg' %}" alt="" />
+            {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- advantages END -->
+    <div class="line_seperation"></div>
+    <section class="section social">
+      <div class="section_title" style="width: 600px">TRUSTED BY THOUSANDS OF CUSTOMERS</div>
+      <div class="social_cards">
+        <div class="social_card">
+          <img src="{% static 'assets/icon/social1.svg' %}" alt="" />
+          <div class="social_card_wrap">
+            <h2 class="social_card_title">instagram reviews</h2>
+            <p class="social_card_desc">Our screens offer high transparency, maintaining visibility behind the screen, while delivering bright and clear images even in bright lighting conditions.</p>
+            <div class="social_rating"></div>
+            <p>(478)</p>
+            <p class="social_autor">Jessica</p>
+          </div>
+        </div>
+        <div class="social_card">
+          <img src="{% static 'assets/icon/social.svg' %}" alt="" />
+          <div class="social_card_wrap">
+            <h2 class="social_card_title">Amazon reviews</h2>
+            <p class="social_card_desc">Our screens offer high transparency, maintaining visibility behind the screen, while delivering bright and clear images even in bright lighting conditions.</p>
+            <div class="social_rating"></div>
+            <p>(478)</p>
+            <p class="social_autor">Jessica</p>
+          </div>
+        </div>
+        <div class="social_card">
+          <img src="{% static 'assets/icon/socail2.svg' %}" alt="" />
+          <div class="social_card_wrap">
+            <h2 class="social_card_title">facebook reviews</h2>
+            <p class="social_card_desc">Our screens offer high transparency, maintaining visibility behind the screen, while delivering bright and clear images even in bright lighting conditions.</p>
+            <div class="social_rating"></div>
+            <p>(478)</p>
+            <p class="social_autor">Jessica</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOCIAL END -->
+    <div class="line_seperation"></div>
+    <section class="questions section">
+      <h1 class="section_title" style="width: 100%">Do You Have Any Questions?</h1>
+
+      <div class="questions_body">
+        {% for questions in questions%}
+        <div class="questions_item">
+
+          <h2>01</h2>
+          <div>
+            <h3>{{questions.questions}}</h3>
+            <p>{{questions.answers}}</p>
+          </div>
+          <img src="{% static 'assets/icon/arrow_big.svg' %}" alt="" class="accordion_big_arrow" style="transform: rotate(0deg)" />
+        </div>
+        {% endfor %}
+
+      </div>
+      <button class="main_btn" onclick="window.location.href='{% url 'products' %}'">SHOP NOW</button>
+
+
+
+      <div class="question_info_more">
+        <p>
+          If you didn't find the answers you are looking for, you can explore more questions and answers <a href="/">HERE</a>.
+        </p>
+        <p>Or, talk to a real live person by clicking on the chat box at the bottom right corner.</p>
+      </div>
+    </section>
+
+    <div class="footer_wrap">
+      {% include 'include/footer.html' %}
+
+    </div>
+
+  </body>
+</html>
+
+{% endblock %}

@@ -1,0 +1,10 @@
+.section_title{
+    font-size: 44px;
+    font-family:"Saudagar" ;
+    font-weight: 400;
+    width: 450px;
+    text-align: center;
+    margin: 10px auto;
+    color: var(--text-white);
+    text-transform: uppercase;
+}

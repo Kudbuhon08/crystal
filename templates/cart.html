@@ -1,0 +1,60 @@
+{% extends 'include/homepage.html' %}
+{% load static %}
+{% block content %}
+
+
+  <body style="background-color: #060d17">
+
+    <body style="background-color: #060d17">
+    {% include 'include/header.html' %}
+
+    <main>
+      <section class="section cart">
+        <div class="cart_header">
+          <h1 class="cart_title">Your cart</h1>
+          <a href="#">Continue shopping</a>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>PRODUCT</th>
+              <th>QUANTITY</th>
+              <th>TOTAL</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="product">
+              <td class="product_info">
+                <img src="{% static 'assets/images/film_screen1.jpg' %}" alt="" />
+                <div>
+                  <h2 class="product_title">Transparency Thin Film Screen</h2>
+                  <p><span>Size:</span>240x960mm</p>
+                  <p><span>Weight:</span>0.5 kg</p>
+                </div>
+              </td>
+              <td>
+                <div class="product_count">
+                  <button class="product_count_btn decrement">-</button>
+                  <p class="product_total_count">0</p>
+                  <button class="product_count_btn increment">+</button>
+                </div>
+              </td>
+              <td class="product_total">
+                <div class="td_wrap">
+                           <div class="total_price">£25.89</div>
+                <a href="#">Remove</a> 
+                </div>
+        
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+    <div class="footer_wrap">
+      {% include 'include/footer.html' %}
+
+    </div>
+
+  </body>
+</html>

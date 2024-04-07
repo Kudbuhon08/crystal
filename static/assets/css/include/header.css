@@ -1,0 +1,45 @@
+.header {
+    max-width: 1380px;
+    height: 60px;
+    border-radius: 10px;
+    background: var(--main-blue);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 60px;
+    margin-top: 10px;
+    position: sticky;
+    top: 10px;
+    margin: 10px auto;
+    z-index: 999;
+
+}
+
+.header nav ul{
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    color: white;
+}
+.header nav a{
+    color: var(--text-white);
+    text-decoration: none;
+    font-family: 'Inter';
+    font-size: 18px;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.header_block{
+    display: flex;
+    gap: 7px;
+}
+/* -----------
+-----------
+-----------
+----------- 
+HEADER END -----------------------------------------------------------------------------------------------------
+-----------
+-----------
+-----------
+-----------  */

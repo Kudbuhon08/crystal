@@ -1,0 +1,589 @@
+.header_banner_block {
+  height: 600px;
+  background: url(../images/banner_bg.png);
+  background-position: center;
+  background-size: cover;
+  padding-top: 60px;
+  margin-top: 10px;
+  border-radius: 20px;
+}
+
+.header_banner_title {
+  font-size: 60px;
+  color: var(--text-white);
+  font-family: "Saudagar";
+  font-weight: 500;
+  text-align: center;
+}
+
+/* BANNER END   */
+
+.container_product_img {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  height: 580px;
+}
+
+.thumbnails {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  line-height: 0;
+}
+
+.thumbnails a {
+  display: block;
+}
+
+.thumbnails img {
+  width: 90px;
+  border-radius: 20px;
+  height: 100px;
+  object-fit: cover;
+  object-position: top;
+}
+
+.slides {
+  overflow: hidden;
+  width: 430px;
+}
+
+.slides li {
+  width: 400px;
+  height: 580px;
+  position: absolute;
+  z-index: 1;
+}
+
+.slides img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 20px;
+}
+
+.slides li:target {
+  z-index: 3;
+  -webkit-animation: slide 1s 1;
+}
+
+.slides li:not(:target) {
+  -webkit-animation: hidden 1s 1;
+}
+
+.product_card {
+  height: 720px;
+  display: flex;
+  background: white;
+  padding-top: 80px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-top: 100px;
+  border-radius: 20px;
+}
+
+.product_title {
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 50px;
+  font-family: "Saudagar";
+  text-transform: uppercase;
+}
+
+.product_rating {
+  display: flex;
+  gap: 5px;
+  margin-top: 5px;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.product_rating_stars {
+  display: flex;
+}
+
+.product_rating span {
+  font-family: "Questrial";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  display: flex;
+  align-items: center;
+  color: #d7bbabbf;
+}
+
+.product_prices {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.product_prices_curr {
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 43px;
+  letter-spacing: 0.6px;
+}
+
+.product_prices_old {
+  font-family: "Inter";
+  font-weight: 400;
+  line-height: 31px;
+  letter-spacing: 0.43px;
+  font-size: 26px;
+  text-decoration: line-through;
+}
+
+.product_desc {
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 18px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.product_options {
+  display: flex;
+  gap: 10px;
+  margin: 10px 0 20px 0;
+}
+
+.product_options button {
+  padding: 10px;
+  font-family: "Inter";
+  line-height: 16px;
+  font-weight: 300;
+  border-radius: 50px;
+  border: none;
+  transition: 0.3s;
+  background: #000;
+  color: white;
+}
+
+.product_options button:hover {
+  background-color: #384bb1;
+}
+
+.product_сharacteristics {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.product_characteristics_item {
+  border-radius: 20px;
+  padding: 15px;
+  font-family: "Inter";
+  font-size: 20px;
+  background: none;
+  line-height: 16px;
+  border: 1px solid black;
+}
+
+.product_payment_title {
+  font-family: "Saudagar";
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 33px;
+  letter-spacing: 0.6px;
+  margin-top: 30px;
+}
+
+.product_payment_wrap {
+  display: flex;
+  gap: 10px;
+}
+/* PRODUCT CARD BUTTONS START */
+
+.product_btn_minus {
+  width: 45.04px;
+  height: 45px;
+  top: 20px;
+  left: 20px;
+  gap: 0px;
+  opacity: 0px;
+  background-color: #fff;
+  border: 1px solid #000000;
+  border-radius: 5px;
+  margin-top: 20px;
+
+}
+
+.product_btn_number {
+  width: 61.05px;
+  height: 45px;
+  left: 55.04px;
+  gap: 0px;
+  border: 1px 0px 0px 0px;
+  opacity: 0px;
+  background-color: #fff;
+  border: 1px solid #000000;
+  border-radius: 5px;
+}
+
+.product_btn_plus {
+  width: 45.04px;
+  height: 45px;
+  left: 126.1px;
+  gap: 0px;
+  opacity: 0px;
+  background-color: #fff;
+  border: 1px solid #000000;
+  border-radius: 5px;
+}
+
+.product_btn_by_now {
+  width: 500px;
+  height: 46px;
+  padding: 12px 30px 15px 30px;
+  border-radius: 10px;
+  background-color: #000000;
+  color: #fff;
+  margin-left: 10px;
+  font-family: "Saudagar";
+}
+
+/* PRODUCT CARD BUTTONS END */
+
+/* PRODUCT END  */
+
+.innovative_cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.innovative_card {
+  width: 32%;
+  margin-bottom: 20px;
+  color: var(--text-white);
+}
+
+.innovative_card_title {
+  font-size: 30px;
+  font-weight: 400;
+  font-family: "Saudagar";
+  margin: 10px 0 15px 0;
+  line-height: 35px;
+  text-transform: uppercase;
+}
+
+.innovative_card_desc {
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.innovative_bottom_border {
+  height: 10px;
+  box-shadow: 0px 3px 2px white;
+  border-radius: 20px;
+}
+
+/* innovative END  */
+
+#wrapper {
+  width: 100%;
+  position: relative;
+}
+
+#carousel {
+  overflow: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+#carousel::-webkit-scrollbar {
+  height: 0;
+}
+
+#prev,
+#next {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  background: #15255e;
+  border: none;
+  padding: 8px;
+  border-radius: 50%;
+  outline: 0;
+  cursor: pointer;
+  position: absolute;
+}
+
+#prev {
+  top: 50%;
+  left: 0;
+  transform: translate(50%, -50%);
+  display: none;
+}
+
+#next {
+  top: 50%;
+  right: 0;
+  transform: translate(-50%, -50%);
+}
+
+#content {
+  display: grid;
+  grid-gap: 16px;
+  grid-auto-flow: column;
+  margin: auto;
+  box-sizing: border-box;
+}
+
+.advantages .item {
+  width: 450px;
+  height: 180px;
+  background: green;
+}
+
+.advantages_carousel_itm {
+  padding: 0 43px;
+}
+
+.advantages_carousel_itm img {
+  width: 330px;
+  height: 350px;
+  border-radius: 10px;
+}
+
+.advantages_title {
+  font-family: "Saudagar";
+  font-weight: 400;
+  font-size: 42px;
+  line-height: 40px;
+  letter-spacing: 0.6px;
+  color: #d8bcab;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.advantages_desc {
+  font-family: "Questrial";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--text-white);
+  text-align: center;
+  width: 245px;
+  margin: 0 auto;
+}
+
+/* advantages END  */
+
+.functions_cont {
+  height: 720px;
+  background: var(--main-blue);
+  border-radius: 20px;
+  margin-top: 60px;
+  padding: 40px 20px;
+}
+
+.functions_cont_wrap {
+  display: flex;
+}
+
+.functions_cont_block {
+  width: 45%;
+}
+
+.functions_cont_block img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.functions_accordion {
+  width: 55%;
+}
+
+.functions_accordion_item {
+  border-top: 1px solid var(--gray-border);
+  padding-top: 20px;
+  padding-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.functions_accordion_item h4 {
+  font-family: "Inter";
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-white);
+  width: 200px;
+}
+
+.functions_accordion_item p {
+  font-family: "Inter";
+  width: 330px;
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--text-white);
+  line-height: 18px;
+  letter-spacing: 0.6px;
+}
+
+/* FUNCTION END  */
+
+.reviews {
+  color: #D7BBAB;
+  margin-top: 120px;
+}
+
+.reviews_title {
+  font-family: "Saudagar";
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 33px;
+  letter-spacing: 0.6px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.reviews_block {
+  width: 30%;
+  display: flex;
+  font-family: 'Questrial';
+  justify-content: center;
+}
+
+.reviews_block:first-child {
+  font-weight: 400;
+  font-size: 16px;
+  color: #D7BBABBF;
+}
+
+.reviews_wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.reviews_line {
+  height: 133px;
+  width: 1px;
+  background: white;
+}
+
+.reviews_block:nth-child(3) {
+  flex-direction: column;
+}
+
+.reviews_block_item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.reviews_progress {
+  width: 140px;
+  height: 15px;
+  background: #797979;
+}
+
+.reviews_progress_line {
+  background: white;
+  width: 60%;
+  height: 100%;
+}
+
+.more_reviews {
+  font-family: 'Questrial';
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.reviews_bottom_line {
+  height: 1px;
+  background: white;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  width: 100%;
+}
+
+
+/* REVIEWS END ------------------------------ */
+
+.comment li {
+  border: 1px solid #FFFFFF;
+  border-radius: 20px;
+  height: 190px;
+  padding: 20px;
+  margin-bottom: 20px;
+  font-family: 'Inter';
+  color: #D7BBAB;
+  position: relative;
+}
+
+.comment_list_item_date {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: 1px solid white;
+  padding: 3px;
+  color: var(--text-white);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.comment_list_item_person {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 50px;
+}
+
+.comment_most {
+  color: #D8BCAB;
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  margin-bottom: 50px;
+  margin-top: 65px;
+  display: block;
+}
+
+.pagination_item {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  color: #D8BCAB;
+
+}
+
+.comment_pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.pag_numbers {
+  display: flex;
+  gap: 20px;
+}
+
+.pag_activ {
+  color: #7B7B7B;
+  font-weight: 400;
+  font-family: 'Questrial';
+  font-size: 24px;
+
+}
+
+.comment_pagination img {
+  transform: rotate(-90deg);
+}

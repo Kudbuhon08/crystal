@@ -1,0 +1,548 @@
+{% extends 'include/homepage.html' %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'assets/css/product_p.css' %}" />
+  <body style="background-color: #060d17">
+    {% include 'include/header.html' %}
+
+    <section class="header_banner section">
+      <div class="header_banner_block">
+        <h1 class="header_banner_title">
+          Sale: 65% OFF
+          <br />
+          Ends in
+        </h1>
+      </div>
+    </section>
+    <div class="product_card section">
+      <div class="container_product_img">
+     <ul class="thumbnails">
+      {% for productimage in productimage %}
+      <li>
+        <a href="#slide1"
+          ><img
+            src="{{productimage.image.url}}"
+        /></a>
+      </li>
+    {% endfor %}
+     </ul>
+     
+      <ul class="slides">
+        {% for productimage in productimage %}
+        <li>
+            <img
+              src="{{productimage.image.url}}"
+          />
+        </li>
+      {% endfor %}
+      </ul>
+      </div>
+
+      <div class="container_product_data">
+        <h1 class="product_title">{{product.title}}</h1>
+        <div class="product_rating">
+          <div class="product_rating_stars">
+            <img src="{% static 'assets/icon/star.svg' %}" alt="" />
+            <img src="{% static 'assets/icon/star.svg' %}" alt="" />
+            <img src="{% static 'assets/icon/star.svg' %}" alt="" />
+            <img src="{% static 'assets/icon/star.svg' %}" alt="" />
+            <img src="{% static 'assets/icon/star.svg' %}" alt="" />
+          </div>
+          <span>385 reviews</span>
+        </div>
+
+        <div class="product_prices">
+          <span class="product_prices_curr">{{product.price}}$</span>
+          <span class="product_prices_old"> £29.99 </span>
+        </div>
+        <p class="product_desc"> {{product.descriptions}}
+        </p>
+        <div class="product_options">
+          <button class="product_options_item">Features</button>
+          <button class="product_options_item">Delivery</button>
+          <button class="product_options_item">Specification</button>
+        </div>
+        <div class="product_сharacteristics">
+          <button class="product_characteristics_item">
+            Picture, text display
+          </button>
+          <button class="product_characteristics_item">
+            Animation, video playback
+          </button>
+          <button class="product_characteristics_item">
+            Transparent, curved display
+          </button>
+          <button class="product_characteristics_item">
+            Interactive sensing, infinite splicing
+          </button>
+          <button class="product_characteristics_item">
+            Synchronous, asynchronous control
+          </button>
+          <button class="product_characteristics_item">
+            Remote, cluster control
+          </button>
+        </div>
+
+        <div class="product_payment">
+          <div class="product_payment_title">Checkout Securely With</div>
+          <div class="product_payment_wrap">
+            <div class="product_payment_wrap_item">
+              <img src="{% static 'assets/images/payments/img1.svg' %}" alt="" />
+            </div>
+            <div class="product_payment_wrap_item">
+              <img src="{% static 'assets/images/payments/img2.svg' %}" alt="" />
+            </div>
+            <div class="product_payment_wrap_item">
+              <img src="{% static 'assets/images/payments/img3.svg' %}" alt="" />
+            </div>
+            <div class="product_payment_wrap_item">
+              <img src="{% static 'assets/images/payments/img4.svg' %}" alt="" />
+            </div>
+            <div class="product_payment_wrap_item">
+              <img src="{% static 'assets/images/payments/img5.svg' %}" alt="" />
+            </div>
+            <div class="product_payment_wrap_item">
+              <img src="{% static 'assets/images/payments/img6.svg' %}" alt="" />
+            </div>
+          </div>
+        </div>
+        <div class="product_card_btn">
+          <button class="product_btn_minus">-</button>
+          <button class="product_btn_number">{{product.amount}}</button>
+          <button class="product_btn_plus">+</button>
+          <button class="product_btn_by_now">BUY NOW</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- PRODUCT CARD END   -->
+    <div class="line_seperation"></div>
+
+    <section class="section innovative">
+      <div class="section_title" style="width: 100%">
+        Innovative technology, core technology, so that <br />
+        the product is lighter, softer and more durabl
+      </div>
+      <div class="innovative_cards">
+        <div class="innovative_card">
+          <img src="{% static 'assets/images/innovative.png' %}" alt="" />
+          <h3 class="innovative_card_title">
+            Glass Curtain Walls Shopping centre
+          </h3>
+          <p class="innovative_card_desc">
+            Trade city, electronic city, entertainment district, business
+            centre, hotel, guesthouse, office building and other medium and
+            high-rise buildings outside the glass wall applications.
+          </p>
+          <div class="innovative_bottom_border"></div>
+        </div>
+        <div class="innovative_card">
+          <img src="{% static 'assets/images/innovative.png' %}" alt="" />
+          <h3 class="innovative_card_title">Exhibition</h3>
+          <p class="innovative_card_desc">
+            Commercial exhibitions, boutique conferences, product promotions,
+            car shows, investment roadshows, real estate openings and other
+            temporary promotional applications
+          </p>
+          <div class="innovative_bottom_border"></div>
+        </div>
+        <div class="innovative_card">
+          <img src="{% static 'assets/images/innovative.png' %}" alt="" />
+          <h3 class="innovative_card_title">Interior partitions</h3>
+          <p class="innovative_card_desc">
+            Trade city, electronic city, entertainment district, business
+            centre, hotel, guesthouse, office building and other medium and
+            high-rise buildings outside the glass wall applications.
+          </p>
+          <div class="innovative_bottom_border"></div>
+        </div>
+        <div class="innovative_card">
+          <img src="{% static 'assets/images/innovative.png' %}" alt="" />
+          <h3 class="innovative_card_title">Commercial lifts</h3>
+          <p class="innovative_card_desc">
+            Trade city, electronic city, entertainment district, business
+            centre, hotel, guesthouse, office building and other medium and
+            high-rise buildings outside the glass wall applications.
+          </p>
+          <div class="innovative_bottom_border"></div>
+        </div>
+        <div class="innovative_card">
+          <img src="{% static 'assets/images/innovative.png' %}" alt="" />
+          <h3 class="innovative_card_title">Scenarios Hoisting</h3>
+          <p class="innovative_card_desc">
+            Commercial exhibitions, boutique conference, product promotions, car
+            shows, investment roadshows, real estate openings, 4S shops, shops,
+            franchises, chain shops, exhibition centres, hospitals and other
+            ceiling hanging applications
+          </p>
+          <div class="innovative_bottom_border"></div>
+        </div>
+        <div class="innovative_card">
+          <img src="{% static 'assets/images/innovative.png' %}" alt="" />
+          <h3 class="innovative_card_title">Business Gateway</h3>
+          <p class="innovative_card_desc">
+            Hotels, hotels, office buildings, stations, airports and other lobby
+            welcoming portal automatic glass doors and windows applications.
+          </p>
+          <div class="innovative_bottom_border"></div>
+        </div>
+      </div>
+    </section>
+    <!-- innovative END  -->
+    <div class="line_seperation"></div>
+    <section class="section advantages">
+      <div id="wrapper">
+        <div id="carousel">
+          <div id="content">
+            <div class="advantages_carousel_itm">
+              <img src="{% static 'assets/images/film_screen1.jpg' %}" alt="" />
+              <h2 class="advantages_title">Picture, text display</h2>
+              <p class="advantages_desc">
+                Transparent display effect, excellent display of virtual reality
+                space, flexible, suitable for a variety of curved surface
+                installation
+              </p>
+            </div>
+            <div class="advantages_carousel_itm">
+              <img src="{% static 'assets/images/film_screen1.jpg' %}" alt="" />
+              <h2 class="advantages_title">Picture, text display</h2>
+              <p class="advantages_desc">
+                Transparent display effect, excellent display of virtual reality
+                space, flexible, suitable for a variety of curved surface
+                installation
+              </p>
+            </div>
+            <div class="advantages_carousel_itm">
+              <img src="{% static 'assets/images/film_screen1.jpg' %}" alt="" />
+              <h2 class="advantages_title">Picture, text display</h2>
+              <p class="advantages_desc">
+                Transparent display effect, excellent display of virtual reality
+                space, flexible, suitable for a variety of curved surface
+                installation
+              </p>
+            </div>
+            <div class="advantages_carousel_itm">
+              <img src="{% static 'assets/images/film_screen1.jpg' %}" alt="" />
+              <h2 class="advantages_title">Picture, text display</h2>
+              <p class="advantages_desc">
+                Transparent display effect, excellent display of virtual reality
+                space, flexible, suitable for a variety of curved surface
+                installation
+              </p>
+            </div>
+            <div class="advantages_carousel_itm">
+              <img src="{% static 'assets/images/film_screen1.jpg' %}" alt="" />
+              <h2 class="advantages_title">Picture, text display</h2>
+              <p class="advantages_desc">
+                Transparent display effect, excellent display of virtual reality
+                space, flexible, suitable for a variety of curved surface
+                installation
+              </p>
+            </div>
+            <div class="advantages_carousel_itm">
+              <img src="{% static 'assets/images/film_screen1.jpg' %}" alt="" />
+              <h2 class="advantages_title">Picture, text display</h2>
+              <p class="advantages_desc">
+                Transparent display effect, excellent display of virtual reality
+                space, flexible, suitable for a variety of curved surface
+                installation
+              </p>
+            </div>
+            <div class="advantages_carousel_itm">
+              <img src="{% static 'assets/images/film_screen1.jpg' %}" alt="" />
+              <h2 class="advantages_title">Picture, text display</h2>
+              <p class="advantages_desc">
+                Transparent display effect, excellent display of virtual reality
+                space, flexible, suitable for a variety of curved surface
+                installation
+              </p>
+            </div>
+            <div class="advantages_carousel_itm">
+              <img src="{% static 'assets/images/film_screen1.jpg' %}" alt="" />
+              <h2 class="advantages_title">Picture, text display</h2>
+              <p class="advantages_desc">
+                Transparent display effect, excellent display of virtual reality
+                space, flexible, suitable for a variety of curved surface
+                installation
+              </p>
+            </div>
+            <div class="advantages_carousel_itm">
+              <img src="{% static 'assets/images/film_screen1.jpg' %}" alt="" />
+              <h2 class="advantages_title">Picture, text display</h2>
+              <p class="advantages_desc">
+                Transparent display effect, excellent display of virtual reality
+                space, flexible, suitable for a variety of curved surface
+                installation
+              </p>
+            </div>
+            <div class="advantages_carousel_itm">
+              <img src="{% static 'assets/images/film_screen1.jpg' %}" alt="" />
+              <h2 class="advantages_title">Picture, text display</h2>
+              <p class="advantages_desc">
+                Transparent display effect, excellent display of virtual reality
+                space, flexible, suitable for a variety of curved surface
+                installation
+              </p>
+            </div>
+          </div>
+        </div>
+        <button id="prev">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+          >
+            <path fill="none" d="M0 0h24v24H0V0z" />
+            <path
+              fill="white"
+              d="M15.61 7.41L14.2 6l-6 6 6 6 1.41-1.41L11.03 12l4.58-4.59z"
+            />
+          </svg>
+        </button>
+        <button id="next">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+          >
+            <path fill="none" d="M0 0h24v24H0V0z" />
+            <path
+              fill="white"
+              d="M10.02 6L8.61 7.41 13.19 12l-4.58 4.59L10.02 18l6-6-6-6z"
+            />
+          </svg>
+        </button>
+      </div>
+    </section>
+    <!-- advantages END  -->
+
+    <div class="line_seperation"></div>
+      <section class="section functions">
+        <div class="section_title">Functions</div>
+        <div class="functions_cont">
+          <div class="section_title" style="text-align: start; width: 100%; text-transform: none">Configuration parameters</div>
+          <div class="functions_cont_wrap">
+            <div class="functions_cont_block">
+              <img src="{{configurationsimage.image.url }}" alt="" />
+            </div>
+            <div class="functions_accordion">
+              {% for configurations in configurations%}
+              <div class="functions_accordion_item">
+                <h4>{{configurations.title}}</h4>
+                <p>{{configurations.descriptions}}</p>
+                <img src="{% static 'assets/icon/arrow.svg' %}" alt="" />
+              {% endfor %}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <!-- FUNCTIONS END   -->
+    <section class="reviews section">
+      <h1 class="reviews_title">Customer Reviews</h1>
+      <div class="reviews_wrap">
+        <div class="reviews_block">
+          <div class="reviews_block_wrap">
+            <div class="reviews_stars">
+              <img src="{% static 'assets/icon/star.svg' %}" alt="" />
+              <img src="{% static 'assets/icon/star.svg' %}" alt="" />
+              <img src="{% static 'assets/icon/star.svg' %}" alt="" />
+              <img src="{% static 'assets/icon/star.svg' %}" alt="" />
+              <img src="{% static 'assets/icon/star.svg' %}" alt="" />
+            </div>
+            <span>4.52 out of 5</span>
+          </div>
+
+          <span>Based on 385 reviews</span>
+        </div>
+        <div class="reviews_line"></div>
+        <div class="reviews_block">
+          <div class="reviews_block_item">
+            <div class="reviews_block_item_stars">
+              <img src="{% static 'assets/icon/star.svg' %}" alt="" />
+              <img src="{% static 'assets/icon/star.svg' %}" alt="" />
+              <img src="{% static 'assets/icon/star.svg' %}" alt="" />
+              <img src="{% static 'assets/icon/star.svg' %}" alt="" />
+              <img src="{% static 'assets/icon/star.svg' %}" alt="" />
+            </div>
+            <div class="reviews_progress">
+              <div class="reviews_progress_line"></div>
+            </div>
+            <span>350</span>
+          </div>
+          <div class="reviews_block_item">
+            <div class="reviews_block_item_stars">
+              <img src="{% static 'assets/icon/star.svg' %}" alt="" />
+              <img src="{% static 'assets/icon/star.svg' %}" alt="" />
+              <img src="{% static 'assets/icon/star.svg' %}" alt="" />
+              <img src="{% static 'assets/icon/star.svg' %}" alt="" />
+              <img src="{% static 'assets/icon/star.svg' %}" alt="" />
+            </div>
+            <div class="reviews_progress">
+              <div class="reviews_progress_line"></div>
+            </div>
+            <span>350</span>
+          </div>
+          <div class="reviews_block_item">
+            <div class="reviews_block_item_stars">
+              <img src="{% static 'assets/icon/star.svg' %}" alt="" />
+              <img src="{% static 'assets/icon/star.svg' %}" alt="" />
+              <img src="{% static 'assets/icon/star.svg' %}" alt="" />
+              <img src="{% static 'assets/icon/star.svg' %}" alt="" />
+              <img src="{% static 'assets/icon/star.svg' %}" alt="" />
+            </div>
+            <div class="reviews_progress">
+              <div class="reviews_progress_line"></div>
+            </div>
+            <span>350</span>
+          </div>
+          <div class="reviews_block_item">
+            <div class="reviews_block_item_stars">
+              <img src="{% static 'assets/icon/star.svg' %}" alt="" />
+              <img src="{% static 'assets/icon/star.svg' %}" alt="" />
+              <img src="{% static 'assets/icon/star.svg' %}" alt="" />
+              <img src="{% static 'assets/icon/star.svg' %}" alt="" />
+              <img src="{% static 'assets/icon/star.svg' %}" alt="" />
+            </div>
+            <div class="reviews_progress">
+              <div class="reviews_progress_line"></div>
+            </div>
+            <span>350</span>
+          </div>
+          <div class="reviews_block_item">
+            <div class="reviews_block_item_stars">
+              <img src="{% static 'assets/icon/star.svg' %}" alt="" />
+              <img src="{% static 'assets/icon/star.svg' %}" alt="" />
+              <img src="{% static 'assets/icon/star.svg' %}" alt="" />
+              <img src="{% static 'assets/icon/star.svg' %}" alt="" />
+              <img src="{% static 'assets/icon/star.svg' %}" alt="" />
+            </div>
+            <div class="reviews_progress">
+              <div class="reviews_progress_line"></div>
+            </div>
+            <span>350</span>
+          </div>
+        </div>
+        <div class="reviews_line"></div>
+        <div class="reviews_block"></div>
+      </div>
+      <div class="reviews_bottom_line"></div>
+      <p class="more_reviews">Customer photos & videos</p>
+    </section>
+
+    <!-- REVIEWS END   -->
+    <section class="comment section">
+      <a href="#" class="comment_most">Most Recent</a>
+      <ul class="comment_list">
+        <li class="comment_list_item">
+          <div class="comment_list_item_top">
+            <div class="comment_list_item_rating">
+              <div class="comment_list_item_stars">
+                <img src="{% static 'assets/icon/star.svg' %}" alt="" />
+                <img src="{% static 'assets/icon/star.svg' %}" alt="" />
+                <img src="{% static 'assets/icon/star.svg' %}" alt="" />
+                <img src="{% static 'assets/icon/star.svg' %}" alt="" />
+                <img src="{% static 'assets/icon/star.svg' %}" alt="" />
+              </div>
+            </div>
+            <p class="comment_list_item_date">03/11/2024</p>
+          </div>
+          <div class="comment_list_item_body">
+            <div class="comment_list_item_person">
+              <img src="{% static 'assets/icon/person_comment.svg' %}" alt="" />Imane Choukhi
+            </div>
+            <p>LED Transparency is wonderful</p>
+          </div>
+        </li>
+        <li class="comment_list_item">
+          <div class="comment_list_item_top">
+            <div class="comment_list_item_rating">
+              <div class="comment_list_item_stars">
+                <img src="{% static 'assets/icon/star.svg' %}" alt="" />
+                <img src="{% static 'assets/icon/star.svg' %}" alt="" />
+                <img src="{% static 'assets/icon/star.svg' %}" alt="" />
+                <img src="{% static 'assets/icon/star.svg' %}" alt="" />
+                <img src="{% static 'assets/icon/star.svg' %}" alt="" />
+              </div>
+            </div>
+            <p class="comment_list_item_date">03/11/2024</p>
+          </div>
+          <div class="comment_list_item_body">
+            <div class="comment_list_item_person">
+              <img src="{% static 'assets/icon/person_comment.svg' %}" alt="" />Imane Choukhi
+            </div>
+            <p>LED Transparency is wonderful</p>
+          </div>
+        </li>
+        <li class="comment_list_item">
+          <div class="comment_list_item_top">
+            <div class="comment_list_item_rating">
+              <div class="comment_list_item_stars">
+                <img src="{% static 'assets/icon/star.svg' %}" alt="" />
+                <img src="{% static 'assets/icon/star.svg' %}" alt="" />
+                <img src="{% static 'assets/icon/star.svg' %}" alt="" />
+                <img src="{% static 'assets/icon/star.svg' %}" alt="" />
+                <img src="{% static 'assets/icon/star.svg' %}" alt="" />
+              </div>
+            </div>
+            <p class="comment_list_item_date">03/11/2024</p>
+          </div>
+          <div class="comment_list_item_body">
+            <div class="comment_list_item_person">
+              <img src="{% static 'assets/icon/person_comment.svg' %}" alt="" />Imane Choukhi
+            </div>
+            <p>LED Transparency is wonderful</p>
+          </div>
+        </li>
+      </ul>
+      <div class="comment_pagination">
+        <div class="pag_numbers">
+          <div class="pagination_item pag_activ">1</div>
+          <div class="pagination_item">2</div>
+          <div class="pagination_item">3</div>
+        </div>
+
+        <img src="{% static 'assets/icon/arrow.svg' %}" alt="" />
+      </div>
+    </section>
+
+    <div class="footer_wrap">
+      {% include 'include/footer.html' %}
+
+    </div>
+  </body>
+
+  <script>
+    // Получаем ссылки на кнопки и элемент отображения количества товара
+    const btnMinus = document.querySelector('.product_btn_minus');
+    const btnPlus = document.querySelector('.product_btn_plus');
+    const display = document.querySelector('.product_btn_number');
+  
+    let quantity = 0; // Изначальное количество товара
+  
+    // Функция для обновления отображения количества товара
+    function updateDisplay() {
+      display.textContent = quantity;
+    }
+  
+    // Обработчик для кнопки "-"
+    btnMinus.addEventListener('click', function() {
+      if (quantity > 0) {
+        quantity--;
+        updateDisplay();
+      }
+    });
+  
+    // Обработчик для кнопки "+"
+    btnPlus.addEventListener('click', function() {
+      quantity++;
+      updateDisplay();
+    });
+  </script>
+</html>
+{% endblock %}
+
