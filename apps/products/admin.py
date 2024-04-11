@@ -1,11 +1,15 @@
 from django.contrib import admin
-from apps.products.models import Product, ProductImage
+from .models import Product, ProductImage, ProductCard
 
-class ProductInline(admin.TabularInline):
-    model = ProductImage  # Assuming ProductImage is the model representing product images
-    extra = 1  # Adjust the number of extra photo fields as needed
+class ProductImageInline(admin.TabularInline):
+    model = ProductImage
+    extra = 1
+
+class ProductCardInline(admin.TabularInline):
+    model = ProductCard
+    extra = 1
 
 class ProductAdmin(admin.ModelAdmin):
-    inlines = [ProductInline]
+    inlines = [ProductImageInline, ProductCardInline]
 
 admin.site.register(Product, ProductAdmin)

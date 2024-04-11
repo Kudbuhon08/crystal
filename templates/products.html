@@ -117,77 +117,24 @@
 
     <!-- PRODUCT CARD END   -->
     <div class="line_seperation"></div>
-
     <section class="section innovative">
       <div class="section_title" style="width: 100%">
         Innovative technology, core technology, so that <br />
         the product is lighter, softer and more durabl
       </div>
       <div class="innovative_cards">
+        {% for product_card in product.product_cards.all %}
         <div class="innovative_card">
-          <img src="{% static 'assets/images/innovative.png' %}" alt="" />
+          <img src="{{ product_card.image.url }}" alt="" />
           <h3 class="innovative_card_title">
-            Glass Curtain Walls Shopping centre
+            {{ product_card.title }}
           </h3>
           <p class="innovative_card_desc">
-            Trade city, electronic city, entertainment district, business
-            centre, hotel, guesthouse, office building and other medium and
-            high-rise buildings outside the glass wall applications.
+            {{ product_card.description }}
           </p>
           <div class="innovative_bottom_border"></div>
         </div>
-        <div class="innovative_card">
-          <img src="{% static 'assets/images/innovative.png' %}" alt="" />
-          <h3 class="innovative_card_title">Exhibition</h3>
-          <p class="innovative_card_desc">
-            Commercial exhibitions, boutique conferences, product promotions,
-            car shows, investment roadshows, real estate openings and other
-            temporary promotional applications
-          </p>
-          <div class="innovative_bottom_border"></div>
-        </div>
-        <div class="innovative_card">
-          <img src="{% static 'assets/images/innovative.png' %}" alt="" />
-          <h3 class="innovative_card_title">Interior partitions</h3>
-          <p class="innovative_card_desc">
-            Trade city, electronic city, entertainment district, business
-            centre, hotel, guesthouse, office building and other medium and
-            high-rise buildings outside the glass wall applications.
-          </p>
-          <div class="innovative_bottom_border"></div>
-        </div>
-        <div class="innovative_card">
-          <img src="{% static 'assets/images/innovative.png' %}" alt="" />
-          <h3 class="innovative_card_title">Commercial lifts</h3>
-          <p class="innovative_card_desc">
-            Trade city, electronic city, entertainment district, business
-            centre, hotel, guesthouse, office building and other medium and
-            high-rise buildings outside the glass wall applications.
-          </p>
-          <div class="innovative_bottom_border"></div>
-        </div>
-        <div class="innovative_card">
-          <img src="{% static 'assets/images/innovative.png' %}" alt="" />
-          <h3 class="innovative_card_title">Scenarios Hoisting</h3>
-          <p class="innovative_card_desc">
-            Commercial exhibitions, boutique conference, product promotions, car
-            shows, investment roadshows, real estate openings, 4S shops, shops,
-            franchises, chain shops, exhibition centres, hospitals and other
-            ceiling hanging applications
-          </p>
-          <div class="innovative_bottom_border"></div>
-        </div>
-        <div class="innovative_card">
-          <img src="{% static 'assets/images/innovative.png' %}" alt="" />
-          <h3 class="innovative_card_title">Business Gateway</h3>
-          <p class="innovative_card_desc">
-            Hotels, hotels, office buildings, stations, airports and other lobby
-            welcoming portal automatic glass doors and windows applications.
-          </p>
-          <div class="innovative_bottom_border"></div>
-        </div>
-      </div>
-    </section>
+        {% endfor %}
     <!-- innovative END  -->
     <div class="line_seperation"></div>
     <section class="section advantages">
@@ -281,7 +228,7 @@
               <p class="advantages_desc">
                 Transparent display effect, excellent display of virtual reality
                 space, flexible, suitable for a variety of curved surface
-                installation
+                installation -->
               </p>
             </div>
           </div>

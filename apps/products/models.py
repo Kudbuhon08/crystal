@@ -34,4 +34,20 @@ class ProductImage(models.Model):
 
     class Meta:
         verbose_name = "Products image" 
-        
+
+
+
+class ProductCard(models.Model):
+    product = models.ForeignKey(Product, related_name='product_cards', on_delete=models.CASCADE)
+    image = models.ImageField(upload_to='images/', verbose_name='Product Card Image')
+    title = models.CharField(max_length=255, verbose_name='Title for Card')
+    description = models.TextField(verbose_name='Description for Card')
+
+    def __str__(self):
+        return self.title
+
+
+    class Meta:
+        verbose_name = 'Product Card'
+        unique_together = ('image', 'title', 'description' )
+
